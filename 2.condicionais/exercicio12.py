@@ -1,9 +1,28 @@
+from os import system
+system('cls')
+
+
 soma = 0
+for i in range(3):
+    while True:
 
-for i in range(4):
-    nota = float(input(f"{i+1}ª Nota: "))
-    soma+=nota
+        nota = float(input(f"{i+1}ª Nota: "))
     
-media = soma / 4    
+        if nota < 0 or nota > 10:
+            print('Número inválido.')
+        else:
+            soma+=nota
+            break    
+        
 
-print(f"Média: {media}")
+media = soma / 3  
+
+if(media > 7):
+    resultado = 'Aprovado'
+elif(media>= 5):
+    resultado = 'Recuperação'
+else:
+    resultado = 'Reprovado'
+
+print(f"Média: {media:.2f}")
+print(f"{resultado}")

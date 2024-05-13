@@ -1,16 +1,24 @@
 soma = 0
-for i in range(3):
-    nota = float(input(f"{i+1}ª Nota: "))
-    soma+=nota
+contador = 0
 
-media = soma / 3
+while True:
+    nota = int(input("Digite mais uma nota: "))
+    r = str(input("Deseja inserir mais uma nota? ")).upper()
+   
+    soma += nota
+    contador+=1
+    if r == 'N':
+        break
 
-if(media >= 7):
-    resultado = 'Aprovado!'
-elif(media >= 4):
-    resultado = 'Recuperação!'
+media = soma / contador
+
+if(media > 7):
+    resultado = 'Aprovado'
+elif(media>= 5):
+    resultado = 'Recuperação'
 else:
-    resultado = 'Reprovado!'
+    resultado = 'Reprovado'
 
 print(f"Média: {media:.2f}")
-print(f"Resultado: {resultado}")
+print(f"{resultado}")
+    

@@ -1,11 +1,23 @@
-pares = 0
-impares = 0
-for i in range(1, 6):
-    numero = int(input(f"{i}º Número: "))
+from os import system
+system('cls')
 
-    if(numero % 2 == 0):
-        pares+=1
+
+contador = 0
+soma = 0
+
+while True:
+
+    for i in range(2):
+        nota = float(input(f"{i+1}ª Nota: "))
+    soma+=nota
+    contador+=1
+
+    if nota < 0 or nota > 10:
+        print('Número inválido.')
     else:
-        impares+=1    
-print(f"Quantidades de pares: {pares}")
-print(f"Quantidades de ímpares: {impares}")
+        break    
+        
+
+media = soma / contador     
+
+print(f"Média: {media:.2f}")

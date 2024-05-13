@@ -1,6 +1,10 @@
-soma = 0
-for i in range(1, 6):
-    numero = int(input(f"{i}º Número: "))
+from os import system
+system('cls')
 
-    soma+= numero
-print(f"Soma: {soma}")  
+nota = -1
+
+while nota < 0 or nota > 10:
+
+    nota = float(input("Digite uma nota: "))
+
+print(f"Nota informada: {nota:.2f}")
