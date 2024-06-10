@@ -1,0 +1,26 @@
+soma = 0
+notas = []
+
+#Função para fazer a soma
+def somaMedia():
+    soma+=notas[i]
+    return soma
+    
+# Função para indentificar a média e mostrar a situação do aluno.
+def mostrarResultado(resultado):
+    if media > 7:
+        resultado = "Aprovado"
+    else:
+        resultado = "Reprovado"
+        return resultado
+        
+# Laço de repetição para pedir as notas.    
+for i in range(3):
+    nota = float(input(f"{i+1}ª Nota: "))
+    notas.append(nota)
+ 
+media = soma / 3
+
+# Exibindo resultados.
+print(f"Média: {media}")    
+print(f"resulatdo {resultado}")
